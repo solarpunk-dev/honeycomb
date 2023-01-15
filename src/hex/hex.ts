@@ -96,8 +96,17 @@ export class Hex
     return -this.q - this.r
   }
 
+  get data(): any {
+    return this._data
+  }
+
+  set data(dataValue){
+    this._data = dataValue;
+  }
+
   readonly q: number
   readonly r: number
+  private _data: any
 
   constructor(coordinates: HexCoordinates = [0, 0]) {
     const { q, r } = toCube(this, coordinates)
