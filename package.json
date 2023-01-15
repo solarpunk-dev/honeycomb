@@ -6,25 +6,6 @@
   "main": "dist/honeycomb-grid.umd.js",
   "module": "dist/honeycomb-grid.mjs",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/honeycomb-grid.mjs",
-      "require": "./dist/honeycomb-grid.umd.js"
-    }
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.build.json && vite build",
-    "coverage": "vitest run --coverage",
-    "dev": "vite",
-    "docs:build": "typedoc && vitepress build docs",
-    "docs:dev": "concurrently -n typedoc,vitepress \"typedoc --watch\" \"vitepress dev docs --port 5174\"",
-    "docs:serve": "vitepress serve docs --port 5001",
-    "lint": "eslint . --fix",
-    "prepare": "husky install",
-    "preview": "vite preview",
-    "test": "vitest"
-  },
-  "author": "Abbe Keultjes <flauwekeul@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@semantic-release/git": "10.0.1",
@@ -53,14 +34,6 @@
     "vitest": "0.25.8",
     "vue": "3.2.45"
   },
-  "files": [
-    "dist",
-    "FUNDING.yml"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/flauwekeul/honeycomb.git"
-  },
   "keywords": [
     "grid",
     "hex",
@@ -70,10 +43,6 @@
     "tiles",
     "node"
   ],
-  "bugs": {
-    "url": "https://github.com/flauwekeul/honeycomb/issues"
-  },
-  "homepage": "http://abbekeultjes.nl/honeycomb",
   "engines": {
     "node": ">=16"
   }
