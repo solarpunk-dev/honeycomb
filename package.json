@@ -24,7 +24,6 @@
     "preview": "vite preview",
     "test": "vitest"
   },
-  "author": "Abbe Keultjes <flauwekeul@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@semantic-release/git": "10.0.1",
@@ -53,14 +52,6 @@
     "vitest": "0.25.8",
     "vue": "3.2.45"
   },
-  "files": [
-    "dist",
-    "FUNDING.yml"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/flauwekeul/honeycomb.git"
-  },
   "keywords": [
     "grid",
     "hex",
@@ -70,10 +61,6 @@
     "tiles",
     "node"
   ],
-  "bugs": {
-    "url": "https://github.com/flauwekeul/honeycomb/issues"
-  },
-  "homepage": "http://abbekeultjes.nl/honeycomb",
   "engines": {
     "node": ">=16"
   }
