@@ -1,4 +1,4 @@
-import { describe, expect, Mock, test, vi } from 'vitest'
+import { describe, expect, expectTypeOf, Mock, test, vi } from 'vitest'
 import { AxialCoordinates, defineHex, Hex, HexCoordinates, HexSettings, Orientation } from '../hex'
 import { Grid } from './grid'
 import { fromCoordinates, rectangle } from './traversers'
@@ -8,8 +8,29 @@ describe('creation', () => {
   test('creates a grid from a hex constructor', () => {
     const grid = new Grid(Hex)
 
+    expectTypeOf(grid).toMatchTypeOf<Grid<Hex>>()
     expect(grid).toBeInstanceOf(Grid)
     expect(grid.size).toBe(0)
+  })
+
+  test('creates a grid using a class extending from Hex', () => {
+    class CustomHex extends Hex {
+      customProp = 1
+    }
+    const grid = new Grid(CustomHex)
+
+    expectTypeOf(grid).toMatchTypeOf<Grid<CustomHex>>()
+    expect(grid.createHex()).toHaveProperty('customProp', 1)
+  })
+
+  test('creates a grid using a class extending from defineHex()', () => {
+    class CustomHex extends defineHex() {
+      customProp = 1
+    }
+    const grid = new Grid(CustomHex)
+
+    expectTypeOf(grid).toMatchTypeOf<Grid<CustomHex>>()
+    expect(grid.createHex()).toHaveProperty('customProp', 1)
   })
 
   test('creates a grid from a hex constructor and one or more traversers', () => {
@@ -83,6 +104,17 @@ describe('static fromIterable()', () => {
 })
 
 describe('static fromJSON()', () => {
+  class CustomHex extends defineHex() {
+    static create(coordinates: HexCoordinates, custom: string) {
+      const hex = new CustomHex(coordinates)
+      hex.custom = custom
+      return hex
+    }
+
+    custom!: string
+  }
+  type DeserializedCustomHex = AxialCoordinates & Pick<CustomHex, 'custom'>
+
   test('creates a grid from an object containing hex settings and coordinates', () => {
     const hexSettings: HexSettings = {
       dimensions: { xRadius: 10, yRadius: 10 },
@@ -97,13 +129,42 @@ describe('static fromJSON()', () => {
     const result = Grid.fromJSON({ hexSettings, coordinates })
 
     expect(result).toBeInstanceOf(Grid)
-    expect(result.createHex()).toContain(hexSettings)
+    expect(result.hexPrototype).toContain(hexSettings)
     expect(result).toStrictEqual(
       new Grid(
         Hex,
         coordinates.map((c) => new Hex(c)),
       ),
     )
+  })
+
+  test('accepts an optional hex factory to create custom hexes with', () => {
+    const coordinates: DeserializedCustomHex[] = [
+      { q: 0, r: 0, custom: 'a' },
+      { q: 1, r: 0, custom: 'b' },
+    ]
+    const hexFactory = vi.fn(({ q, r, custom }: DeserializedCustomHex) => CustomHex.create([q, r], custom))
+    const result = Grid.fromJSON({ hexSettings: CustomHex.settings, coordinates }, hexFactory)
+
+    expect(result).toBeInstanceOf(Grid)
+    expect(result.hexPrototype).toContain(CustomHex.settings)
+    expect(hexFactory).toBeCalledTimes(2)
+    expect(hexFactory).toBeCalledWith(coordinates[0], 0, coordinates)
+    expect(hexFactory).toBeCalledWith(coordinates[1], 1, coordinates)
+    expect(result).toStrictEqual(
+      new Grid(CustomHex, [CustomHex.create(coordinates[0], 'a'), CustomHex.create(coordinates[1], 'b')]),
+    )
+    expect(result.hexPrototype.constructor).toBe(CustomHex)
+  })
+
+  test('calls the hex factory to get the constructor when coordinates are empty', () => {
+    const coordinates: DeserializedCustomHex[] = []
+    const hexFactory = vi.fn(({ q, r, custom }: DeserializedCustomHex) => CustomHex.create([q, r], custom))
+    const result = Grid.fromJSON({ hexSettings: CustomHex.settings, coordinates }, hexFactory)
+
+    expect(hexFactory).toBeCalledTimes(1)
+    expect(result).toStrictEqual(new Grid(CustomHex, []))
+    expect(result.hexPrototype.constructor).toBe(CustomHex)
   })
 })
 

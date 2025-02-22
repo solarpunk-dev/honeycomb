@@ -1,4 +1,10 @@
-# Interface: GridAsJSON
+# Interface: GridAsJSON<T\>
+
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`AxialCoordinates`](AxialCoordinates.md) = [`AxialCoordinates`](AxialCoordinates.md) |
 
 ## Table of contents
 
@@ -11,11 +17,11 @@
 
 ### <a id="coordinates" name="coordinates"></a> coordinates
 
- **coordinates**: [`AxialCoordinates`](AxialCoordinates.md)[]
+ **coordinates**: `T`[]
 
 #### Defined in
 
-[grid/types.ts:24](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/types.ts#L24)
+[grid/types.ts:24](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/types.ts#L24)
 
 ___
 
@@ -25,4 +31,4 @@ ___
 
 #### Defined in
 
-[grid/types.ts:23](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/types.ts#L23)
+[grid/types.ts:23](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/types.ts#L23)

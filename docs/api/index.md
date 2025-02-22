@@ -1,6 +1,23 @@
-# API - v4.0.1
+# API - v4.1.4
 
 ## Table of contents
+
+### Hex Enumerations
+
+- [Orientation](enums/Orientation.md)
+
+### Traverser Enumerations
+
+- [Rotation](enums/Rotation.md)
+
+### Grid Enumerations
+
+- [Direction](enums/Direction.md)
+
+### Classes
+
+- [Grid](classes/Grid.md)
+- [Hex](classes/Hex.md)
 
 ### Coordinates Interfaces
 
@@ -35,23 +52,6 @@
 - [BoundingBox](interfaces/BoundingBox.md)
 - [Ellipse](interfaces/Ellipse.md)
 
-### Hex Enumerations
-
-- [Orientation](enums/Orientation.md)
-
-### Traverser Enumerations
-
-- [Rotation](enums/Rotation.md)
-
-### Grid Enumerations
-
-- [Direction](enums/Direction.md)
-
-### Classes
-
-- [Grid](classes/Grid.md)
-- [Hex](classes/Hex.md)
-
 ### Coordinates Type Aliases
 
 - [HexCoordinates](index.md#HexCoordinates)
@@ -66,6 +66,10 @@
 ### Traverser Type Aliases
 
 - [Traverser](index.md#Traverser)
+
+### Hex Variables
+
+- [defaultHexSettings](index.md#defaultHexSettings)
 
 ### Coordinates Functions
 
@@ -108,10 +112,6 @@
 - [neighborOf](index.md#neighborOf)
 - [offsetFromZero](index.md#offsetFromZero)
 
-### Hex Variables
-
-- [defaultHexSettings](index.md#defaultHexSettings)
-
 ## Coordinates Type Aliases
 
 ### <a id="HexCoordinates" name="HexCoordinates"></a> HexCoordinates
@@ -120,7 +120,7 @@
 
 #### Defined in
 
-[hex/types.ts:61](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/types.ts#L61)
+[hex/types.ts:61](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/types.ts#L61)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[hex/types.ts:48](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/types.ts#L48)
+[hex/types.ts:48](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/types.ts#L48)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[hex/types.ts:56](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/types.ts#L56)
+[hex/types.ts:56](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/types.ts#L56)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[hex/types.ts:119](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/types.ts#L119)
+[hex/types.ts:119](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/types.ts#L119)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[hex/types.ts:76](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/types.ts#L76)
+[hex/types.ts:76](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/types.ts#L76)
 
 ___
 
@@ -212,7 +212,17 @@ ___
 
 #### Defined in
 
-[grid/types.ts:6](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/types.ts#L6)
+[grid/types.ts:6](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/types.ts#L6)
+
+## Hex Variables
+
+### <a id="defaultHexSettings" name="defaultHexSettings"></a> defaultHexSettings
+
+ `Const` **defaultHexSettings**: [`HexSettings`](interfaces/HexSettings.md)
+
+#### Defined in
+
+[hex/hex.ts:133](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/hex.ts#L133)
 
 ## Coordinates Functions
 
@@ -232,7 +242,7 @@ ___
 
 #### Defined in
 
-[hex/functions/completeCube.ts:7](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/completeCube.ts#L7)
+[hex/functions/completeCube.ts:7](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/completeCube.ts#L7)
 
 ___
 
@@ -252,7 +262,7 @@ value is AxialCoordinates
 
 #### Defined in
 
-[utils/isAxial.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/utils/isAxial.ts#L8)
+[utils/isAxial.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/utils/isAxial.ts#L8)
 
 ___
 
@@ -272,7 +282,7 @@ value is OffsetCoordinates
 
 #### Defined in
 
-[utils/isOffset.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/utils/isOffset.ts#L8)
+[utils/isOffset.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/utils/isOffset.ts#L8)
 
 ___
 
@@ -292,7 +302,7 @@ value is TupleCoordinates
 
 #### Defined in
 
-[utils/isTuple.ts:7](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/utils/isTuple.ts#L7)
+[utils/isTuple.ts:7](https://github.com/flauwekeul/honeycomb/blob/master/src/utils/isTuple.ts#L7)
 
 ___
 
@@ -315,7 +325,7 @@ Util for converting offset/axial/cube/tuple coordinates to cube coordinates.
 
 #### Defined in
 
-[hex/functions/toCube.ts:12](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/toCube.ts#L12)
+[hex/functions/toCube.ts:12](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/toCube.ts#L12)
 
 ___
 
@@ -341,7 +351,7 @@ ___
 
 #### Defined in
 
-[utils/tupleToCube.ts:6](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/utils/tupleToCube.ts#L6)
+[utils/tupleToCube.ts:6](https://github.com/flauwekeul/honeycomb/blob/master/src/utils/tupleToCube.ts#L6)
 
 ___
 
@@ -363,7 +373,7 @@ ___
 
 #### Defined in
 
-[hex/functions/createHexDimensions.ts:7](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/createHexDimensions.ts#L7)
+[hex/functions/createHexDimensions.ts:7](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/createHexDimensions.ts#L7)
 
 **createHexDimensions**(`boundingBox`, `orientation`): [`Ellipse`](interfaces/Ellipse.md)
 
@@ -380,7 +390,7 @@ ___
 
 #### Defined in
 
-[hex/functions/createHexDimensions.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/createHexDimensions.ts#L8)
+[hex/functions/createHexDimensions.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/createHexDimensions.ts#L8)
 
 **createHexDimensions**(`ellipse`): [`Ellipse`](interfaces/Ellipse.md)
 
@@ -396,7 +406,7 @@ ___
 
 #### Defined in
 
-[hex/functions/createHexDimensions.ts:9](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/createHexDimensions.ts#L9)
+[hex/functions/createHexDimensions.ts:9](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/createHexDimensions.ts#L9)
 
 ___
 
@@ -417,7 +427,7 @@ ___
 
 #### Defined in
 
-[hex/functions/createHexOrigin.ts:7](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/createHexOrigin.ts#L7)
+[hex/functions/createHexOrigin.ts:7](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/createHexOrigin.ts#L7)
 
 **createHexOrigin**(`input`): [`Point`](interfaces/Point.md)
 
@@ -433,7 +443,7 @@ ___
 
 #### Defined in
 
-[hex/functions/createHexOrigin.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/createHexOrigin.ts#L8)
+[hex/functions/createHexOrigin.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/createHexOrigin.ts#L8)
 
 ___
 
@@ -453,7 +463,7 @@ typeof [`Hex`](classes/Hex.md)
 
 #### Defined in
 
-[hex/functions/defineHex.ts:9](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/defineHex.ts#L9)
+[hex/functions/defineHex.ts:9](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/defineHex.ts#L9)
 
 ___
 
@@ -474,7 +484,7 @@ ___
 
 #### Defined in
 
-[hex/functions/equals.ts:7](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/equals.ts#L7)
+[hex/functions/equals.ts:7](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/equals.ts#L7)
 
 **equals**(`a`, `b`): `boolean`
 
@@ -491,7 +501,7 @@ ___
 
 #### Defined in
 
-[hex/functions/equals.ts:11](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/equals.ts#L11)
+[hex/functions/equals.ts:11](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/equals.ts#L11)
 
 ___
 
@@ -511,7 +521,7 @@ ___
 
 #### Defined in
 
-[hex/functions/hexToOffset.ts:18](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/hexToOffset.ts#L18)
+[hex/functions/hexToOffset.ts:18](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/hexToOffset.ts#L18)
 
 ___
 
@@ -531,7 +541,7 @@ ___
 
 #### Defined in
 
-[hex/functions/hexToPoint.ts:7](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/hexToPoint.ts#L7)
+[hex/functions/hexToPoint.ts:7](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/hexToPoint.ts#L7)
 
 ___
 
@@ -552,7 +562,7 @@ ___
 
 #### Defined in
 
-[hex/functions/offsetToCube.ts:27](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/offsetToCube.ts#L27)
+[hex/functions/offsetToCube.ts:27](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/offsetToCube.ts#L27)
 
 ___
 
@@ -573,7 +583,7 @@ ___
 
 #### Defined in
 
-[hex/functions/pointToCube.ts:10](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/pointToCube.ts#L10)
+[hex/functions/pointToCube.ts:10](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/pointToCube.ts#L10)
 
 ___
 
@@ -593,7 +603,7 @@ ___
 
 #### Defined in
 
-[hex/functions/round.ts:7](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/round.ts#L7)
+[hex/functions/round.ts:7](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/round.ts#L7)
 
 ___
 
@@ -605,7 +615,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -620,7 +630,7 @@ ___
 
 #### Defined in
 
-[hex/functions/translate.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/translate.ts#L8)
+[hex/functions/translate.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/translate.ts#L8)
 
 **translate**(`coordinates`, `delta`): [`CubeCoordinates`](interfaces/CubeCoordinates.md)
 
@@ -637,7 +647,7 @@ ___
 
 #### Defined in
 
-[hex/functions/translate.ts:9](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/functions/translate.ts#L9)
+[hex/functions/translate.ts:9](https://github.com/flauwekeul/honeycomb/blob/master/src/hex/functions/translate.ts#L9)
 
 ___
 
@@ -651,13 +661,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `traversers` | [`Traverser`](index.md#Traverser)<`T`, `T`[]\> \| [`Traverser`](index.md#Traverser)<`T`, `T`[]\>[] |
+| `traversers` | [`Traverser`](index.md#Traverser)<`T`\> \| [`Traverser`](index.md#Traverser)<`T`\>[] |
 
 #### Returns
 
@@ -665,19 +675,19 @@ ___
 
 #### Defined in
 
-[grid/traversers/concat.ts:7](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/concat.ts#L7)
+[grid/traversers/concat.ts:7](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/concat.ts#L7)
 
 ___
 
 ### <a id="fromCoordinates" name="fromCoordinates"></a> fromCoordinates
 
-**fromCoordinates**<`T`\>(`...coordinates`): [`Traverser`](index.md#Traverser)<`T`, `T`[]\>
+**fromCoordinates**<`T`\>(`...coordinates`): [`Traverser`](index.md#Traverser)<`T`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -687,11 +697,11 @@ ___
 
 #### Returns
 
-[`Traverser`](index.md#Traverser)<`T`, `T`[]\>
+[`Traverser`](index.md#Traverser)<`T`\>
 
 #### Defined in
 
-[grid/traversers/fromCoordinates.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/fromCoordinates.ts#L8)
+[grid/traversers/fromCoordinates.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/fromCoordinates.ts#L8)
 
 ___
 
@@ -703,7 +713,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -717,7 +727,7 @@ ___
 
 #### Defined in
 
-[grid/traversers/line.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/line.ts#L8)
+[grid/traversers/line.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/line.ts#L8)
 
 **line**<`T`\>(`options`): [`Traverser`](index.md#Traverser)<`T`\>
 
@@ -725,7 +735,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -739,19 +749,19 @@ ___
 
 #### Defined in
 
-[grid/traversers/line.ts:9](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/line.ts#L9)
+[grid/traversers/line.ts:9](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/line.ts#L9)
 
 ___
 
 ### <a id="move" name="move"></a> move
 
-**move**<`T`\>(`direction`): [`Traverser`](index.md#Traverser)<`T`, `T`[]\>
+**move**<`T`\>(`direction`): [`Traverser`](index.md#Traverser)<`T`\>
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -761,11 +771,11 @@ ___
 
 #### Returns
 
-[`Traverser`](index.md#Traverser)<`T`, `T`[]\>
+[`Traverser`](index.md#Traverser)<`T`\>
 
 #### Defined in
 
-[grid/traversers/move.ts:9](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/move.ts#L9)
+[grid/traversers/move.ts:9](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/move.ts#L9)
 
 ___
 
@@ -781,7 +791,7 @@ The rectangle will only have 90° corners for the directions North, East, South 
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -795,7 +805,7 @@ The rectangle will only have 90° corners for the directions North, East, South 
 
 #### Defined in
 
-[grid/traversers/rectangle.ts:14](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/rectangle.ts#L14)
+[grid/traversers/rectangle.ts:14](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/rectangle.ts#L14)
 
 **rectangle**<`T`\>(`cornerA`, `cornerB`): [`Traverser`](index.md#Traverser)<`T`\>
 
@@ -803,7 +813,7 @@ The rectangle will only have 90° corners for the directions North, East, South 
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -818,7 +828,7 @@ The rectangle will only have 90° corners for the directions North, East, South 
 
 #### Defined in
 
-[grid/traversers/rectangle.ts:15](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/rectangle.ts#L15)
+[grid/traversers/rectangle.ts:15](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/rectangle.ts#L15)
 
 ___
 
@@ -830,14 +840,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `times` | `number` |
-| `traversers` | [`Traverser`](index.md#Traverser)<`T`, `T`[]\> \| [`Traverser`](index.md#Traverser)<`T`, `T`[]\>[] |
+| `traversers` | [`Traverser`](index.md#Traverser)<`T`\> \| [`Traverser`](index.md#Traverser)<`T`\>[] |
 
 #### Returns
 
@@ -845,7 +855,7 @@ ___
 
 #### Defined in
 
-[grid/traversers/repeat.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/repeat.ts#L8)
+[grid/traversers/repeat.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/repeat.ts#L8)
 
 ___
 
@@ -857,14 +867,14 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `sources` | [`Traverser`](index.md#Traverser)<`T`, `T`[]\> \| [`Traverser`](index.md#Traverser)<`T`, `T`[]\>[] |
-| `branches` | [`Traverser`](index.md#Traverser)<`T`, `T`[]\> \| [`Traverser`](index.md#Traverser)<`T`, `T`[]\>[] |
+| `sources` | [`Traverser`](index.md#Traverser)<`T`\> \| [`Traverser`](index.md#Traverser)<`T`\>[] |
+| `branches` | [`Traverser`](index.md#Traverser)<`T`\> \| [`Traverser`](index.md#Traverser)<`T`\>[] |
 | `«destructured»` | `Object` |
 | › `includeSource` | `undefined` \| `boolean` |
 
@@ -874,7 +884,7 @@ ___
 
 #### Defined in
 
-[grid/traversers/repeatWith.ts:8](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/repeatWith.ts#L8)
+[grid/traversers/repeatWith.ts:8](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/repeatWith.ts#L8)
 
 ___
 
@@ -886,7 +896,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -900,7 +910,7 @@ ___
 
 #### Defined in
 
-[grid/traversers/ring.ts:9](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/ring.ts#L9)
+[grid/traversers/ring.ts:9](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/ring.ts#L9)
 
 **ring**<`T`\>(`options`): [`Traverser`](index.md#Traverser)<`T`\>
 
@@ -908,7 +918,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -922,7 +932,7 @@ ___
 
 #### Defined in
 
-[grid/traversers/ring.ts:10](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/ring.ts#L10)
+[grid/traversers/ring.ts:10](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/ring.ts#L10)
 
 ___
 
@@ -934,7 +944,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -948,7 +958,7 @@ ___
 
 #### Defined in
 
-[grid/traversers/spiral.ts:10](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/traversers/spiral.ts#L10)
+[grid/traversers/spiral.ts:10](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/traversers/spiral.ts#L10)
 
 ___
 
@@ -972,7 +982,7 @@ ___
 
 #### Defined in
 
-[grid/functions/distance.ts:3](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/functions/distance.ts#L3)
+[grid/functions/distance.ts:3](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/functions/distance.ts#L3)
 
 ___
 
@@ -992,7 +1002,7 @@ value is Point
 
 #### Defined in
 
-[utils/isPoint.ts:5](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/utils/isPoint.ts#L5)
+[utils/isPoint.ts:5](https://github.com/flauwekeul/honeycomb/blob/master/src/utils/isPoint.ts#L5)
 
 ___
 
@@ -1004,7 +1014,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Hex`](classes/Hex.md)<`T`\> |
+| `T` | extends [`Hex`](classes/Hex.md) |
 
 #### Parameters
 
@@ -1019,7 +1029,7 @@ ___
 
 #### Defined in
 
-[grid/functions/neighborOf.ts:47](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/grid/functions/neighborOf.ts#L47)
+[grid/functions/neighborOf.ts:47](https://github.com/flauwekeul/honeycomb/blob/master/src/grid/functions/neighborOf.ts#L47)
 
 ___
 
@@ -1040,14 +1050,4 @@ ___
 
 #### Defined in
 
-[utils/offsetFromZero.ts:6](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/utils/offsetFromZero.ts#L6)
-
-## Hex Variables
-
-### <a id="defaultHexSettings" name="defaultHexSettings"></a> defaultHexSettings
-
- `Const` **defaultHexSettings**: [`HexSettings`](interfaces/HexSettings.md)
-
-#### Defined in
-
-[hex/hex.ts:128](https://github.com/flauwekeul/honeycomb/blob/e7a5c34/src/hex/hex.ts#L128)
+[utils/offsetFromZero.ts:6](https://github.com/flauwekeul/honeycomb/blob/master/src/utils/offsetFromZero.ts#L6)
